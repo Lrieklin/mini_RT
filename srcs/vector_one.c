@@ -6,7 +6,7 @@
 /*   By: lrieklin <lrieklin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:07:34 by lrieklin          #+#    #+#             */
-/*   Updated: 2022/11/02 23:06:10 by lrieklin         ###   ########.fr       */
+/*   Updated: 2022/11/03 00:56:36 by lrieklin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,42 @@
 
 t_vec3	ft_new_vec3(float x, float y, float z)
 {
-	t_vec3	new;
+	t_vec3	res;
 
-	new.x = x;
-	new.y = y;
-	new.z = z;
-	return (new);
+	res.x = x;
+	res.y = y;
+	res.z = z;
+	return (res);
 }
 
 t_vec3	ft_add(t_vec3 *a, t_vec3 *b)
 {
-	t_vec3	addition;
+	t_vec3	res;
 
-	addition.x = a->x + b->x;
-	addition.y = a->y + b->y;
-	addition.z = a->z + b->z;
-	return (addition);
+	res.x = a->x + b->x;
+	res.y = a->y + b->y;
+	res.z = a->z + b->z;
+	return (res);
 }
 
 t_vec3	ft_add3(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 {
-	t_vec3	addition3;
+	t_vec3	res;
 
-	addition3.x = a->x + b->x + c->x;
-	addition3.y = a->y + b->y + c->y;
-	addition3.z = a->z + b->z + c->z;
-	return (addition3);
+	res.x = a->x + b->x + c->x;
+	res.y = a->y + b->y + c->y;
+	res.z = a->z + b->z + c->z;
+	return (res);
 }
 
 t_vec3	ft_sub(t_vec3 *a, t_vec3 *b)
 {
-	t_vec3	subtraction;
+	t_vec3	res;
 
-	subtraction.x = a->x - b->x;
-	subtraction.y = a->y - b->y;
-	subtraction.z = a->z - b->z;
-	return (subtraction);
+	res.x = a->x - b->x;
+	res.y = a->y - b->y;
+	res.z = a->z - b->z;
+	return (res);
 }
 
 t_vec3	ft_norm(t_vec3 *a)

@@ -6,7 +6,7 @@
 /*   By: lrieklin <lrieklin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:10:35 by lrieklin          #+#    #+#             */
-/*   Updated: 2022/11/02 21:10:36 by lrieklin         ###   ########.fr       */
+/*   Updated: 2022/11/03 00:39:38 by lrieklin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,8 +219,8 @@ t_vec3		ft_norm(t_vec3 *a);
 
 /* vec3_two */
 float		ft_length(t_vec3 a);
-t_vec3		ft_mul(t_vec3 *a, t_vec3 *b);
-t_vec3		ft_s_mul(t_vec3 *a, float value);
+t_vec3		ft_multiplication(t_vec3 *a, t_vec3 *b);
+t_vec3		ft_s_multiplication(t_vec3 *a, float value);
 float		ft_dot(t_vec3 *a, t_vec3 *b);
 t_vec3		ft_cross(t_vec3 *a, t_vec3 *b);
 

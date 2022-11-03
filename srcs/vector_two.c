@@ -6,7 +6,7 @@
 /*   By: lrieklin <lrieklin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:07:13 by lrieklin          #+#    #+#             */
-/*   Updated: 2022/11/02 23:05:55 by lrieklin         ###   ########.fr       */
+/*   Updated: 2022/11/03 00:39:29 by lrieklin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ float	ft_length(t_vec3 a)
 	return (length);
 }
 
-t_vec3	ft_mul(t_vec3 *a, t_vec3 *b)
+t_vec3	ft_multiplication(t_vec3 *a, t_vec3 *b)
 {
 	t_vec3	multiplication;
 
@@ -30,7 +30,7 @@ t_vec3	ft_mul(t_vec3 *a, t_vec3 *b)
 	return (multiplication);
 }
 
-t_vec3	ft_s_mul(t_vec3 *a, float value)
+t_vec3	ft_s_multiplication(t_vec3 *a, float value)
 {
 	t_vec3	scalar_multiplication;
 

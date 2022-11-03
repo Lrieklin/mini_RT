@@ -6,7 +6,7 @@
 /*   By: lrieklin <lrieklin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:08:42 by lrieklin          #+#    #+#             */
-/*   Updated: 2022/11/02 21:08:45 by lrieklin         ###   ########.fr       */
+/*   Updated: 2022/11/03 00:41:18 by lrieklin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@ t_vec3	ft_cylinder_norm(t_shapes *cyl, t_vec3 *inter_point)
 	t_vec3	tmp;
 	float	t;
 
-	tmp = ft_s_mul(&cyl->direction, cyl->height);
+	tmp = ft_s_multiplication(&cyl->direction, cyl->height);
 	top_center = ft_add(&cyl->pos, &tmp);
 	if (ft_length(ft_sub(inter_point, &cyl->pos)) < cyl->rad)
-		norm = ft_s_mul(&(cyl->pos), -1);
+		norm = ft_s_multiplication(&(cyl->pos), -1);
 	else if (ft_length(ft_sub(inter_point, &top_center)) < cyl->rad)
 		norm = ft_norm(&(cyl->direction));
 	else
 	{
 		tmp = ft_sub(inter_point, &cyl->pos);
 		t = ft_dot(&tmp, &(cyl->direction));
-		tmp = ft_s_mul(&(cyl->direction), t);
+		tmp = ft_s_multiplication(&(cyl->direction), t);
 		pt = ft_add(&(cyl->pos), &tmp);
 		tmp = ft_sub(inter_point, &pt);
 		norm = ft_norm(&tmp);
@@ -69,7 +69,7 @@ float	ft_cylinder_intersect_unils(t_shapes *cyl, t_vec3 *cam_origin, \
 float	ft_cylinder_intersect(t_shapes *cyl, t_vec3 *cam_origin, \
 											t_vec3 *direction, t_discrmn box)
 {
-	box.tmp = ft_s_mul(&cyl->direction, cyl->height);
+	box.tmp = ft_s_multiplication(&cyl->direction, cyl->height);
 	box.tmp = ft_add(&cyl->pos, &box.tmp);
 	box.ca = ft_sub(&box.tmp, &cyl->pos);
 	box.a = ft_dot(&box.ca, &box.ca) - ft_dot(&box.ca, direction) * \

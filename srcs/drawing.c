@@ -6,7 +6,7 @@
 /*   By: lrieklin <lrieklin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:08:50 by lrieklin          #+#    #+#             */
-/*   Updated: 2022/11/02 21:08:52 by lrieklin         ###   ########.fr       */
+/*   Updated: 2022/11/03 00:39:55 by lrieklin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ t_vec3	ft_find_dir(float dst, int x, int y, t_vec3	cam_dir)
 	a = ft_new_vec3(dst, x - WIDTH / 2, -(y - HEIGHT / 2));
 	b = ft_new_vec3(-(x - WIDTH / 2), dst, -(y - HEIGHT / 2));
 	c = ft_new_vec3(-(y - HEIGHT / 2), x - WIDTH / 2, dst);
-	a = ft_s_mul(&a, cam_dir.x);
-	b = ft_s_mul(&b, cam_dir.y);
-	c = ft_s_mul(&c, cam_dir.z);
+	a = ft_s_multiplication(&a, cam_dir.x);
+	b = ft_s_multiplication(&b, cam_dir.y);
+	c = ft_s_multiplication(&c, cam_dir.z);
 	dir = ft_add3(&a, &b, &c);
 	return (dir);
 }

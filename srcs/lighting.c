@@ -6,7 +6,7 @@
 /*   By: lrieklin <lrieklin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:08:26 by lrieklin          #+#    #+#             */
-/*   Updated: 2022/11/02 21:08:29 by lrieklin         ###   ########.fr       */
+/*   Updated: 2022/11/03 00:40:17 by lrieklin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	ft_lighting(t_main *data, t_shapes *sh, t_vec3 *direction, float dist)
 	int		drop;
 	int		clr;
 
-	tmp = ft_s_mul(direction, dist);
+	tmp = ft_s_multiplication(direction, dist);
 	inter_point = ft_add(&(data->scene.cam.origin), &tmp);
 	nrmlz = ft_normal_surface(inter_point, sh);
 	drop = ft_drop_shadow(data, sh, &inter_point);
